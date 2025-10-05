@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/ash
 
 # install essential desktop packages
 apk update && apk upgrade
@@ -7,4 +7,6 @@ apk add --no-cache --upgrade lxqt-desktop pavucontrol-qt font-dejavu gvfs pcmanf
     # pipewire audo service \
     pipewire wireplumber pipewire-pulse pipewire-jack pipewire-alsa \
     # vnc server \
-    tigervnc 
+    tigervnc \
+    # doas or sudo
+    doas

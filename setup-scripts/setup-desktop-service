@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/ash
 
 # add required services to autostart
 rc-update add polkit
