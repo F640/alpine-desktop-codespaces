@@ -4,27 +4,27 @@
         "dockerfile": "../alpine-openrc.Dockerfile"
     },
     "features": {
-        "../local-features/openrc-custom-scripts": {
+        "./local-features/openrc-custom-scripts": {
         },
-        "../local-features/lxqt-base": {},
-        "../local-features/lxqt-base/openrc-service": {
+        "./local-features/lxqt-base": {},
+        "./local-features/lxqt-base/openrc-service": {
             "installsAfter": [
                 "./local-features/lxqt-base"
             ]
         },
-        "../local-features/lxqt-base/hide-power-opt": {
+        "./local-features/lxqt-base/hide-power-opt": {
             "installsAfter": [
                 "./local-features/lxqt-base"
             ]
         },
-        "../local-features/pipewire": {},
-        "../local-features/pavucontrol-qt": {
+        "./local-features/pipewire": {},
+        "./local-features/pavucontrol-qt": {
             "installsAfter": [
                 "./local-features/pipewire"
             ]
         },
-        "../local-features/websockify": {},
-        "../local-features/novnc": {}
+        "./local-features/websockify": {},
+        "./local-features/novnc": {}
     },
     "remoteUser": "vscode",
     // might will cause problem with openrc
