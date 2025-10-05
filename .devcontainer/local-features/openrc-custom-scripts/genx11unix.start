@@ -1,0 +1,4 @@
+#!/bin/ash
+
+mkdir -pm 1777 /tmp/.X11-unix
+mkdir -pm 1777 /tmp/.ICE-unix

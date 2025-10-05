@@ -1,4 +1,6 @@
 #!/bin/ash
 
+set -e
+
 apk update
-apk add --no-cache lxqt-desktop font-dejavu gvfs pcmanfm-qt udisks2 elogind lxqt-policykit dbus polkit polkit-elogind openrc-user-pam eudev
+apk add --no-cache lxqt-desktop font-dejavu gvfs pcmanfm-qt dbus dbus-x11 breeze
