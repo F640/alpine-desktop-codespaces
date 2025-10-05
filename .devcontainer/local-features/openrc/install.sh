@@ -1,4 +1,4 @@
 #!/bin/ash
 
 apk update
-apk install --no-cache --upgrade openrc
+apk add --no-cache openrc
