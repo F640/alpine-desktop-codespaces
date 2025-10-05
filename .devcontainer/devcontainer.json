@@ -1,6 +1,7 @@
 {
+    "name": "Alpine OpenRC",
     "build": {
-        "dockerfile": "../../alpine-openrc.Dockerfile"
+        "dockerfile": "../alpine-openrc.Dockerfile"
     },
     "features": {
         "../local-features/openrc-custom-scripts": {
@@ -8,18 +9,18 @@
         "../local-features/lxqt-base": {},
         "../local-features/lxqt-base/openrc-service": {
             "installsAfter": [
-                "../local-features/lxqt-base"
+                "./local-features/lxqt-base"
             ]
         },
         "../local-features/lxqt-base/hide-power-opt": {
             "installsAfter": [
-                "../local-features/lxqt-base"
+                "./local-features/lxqt-base"
             ]
         },
         "../local-features/pipewire": {},
         "../local-features/pavucontrol-qt": {
             "installsAfter": [
-                "../local-features/pipewire"
+                "./local-features/pipewire"
             ]
         },
         "../local-features/websockify": {},
@@ -29,7 +30,7 @@
     // might will cause problem with openrc
     "containerUser": "root",
     "overrideCommand": false,
-    // bigger shm for some apps and make it more privileged
+    // bigger shm for some apps to work and make it more privileged
     // if your are planning to run this container in local system you should 
     // remove SYS_ADMIN capability since it is a little bit dangerous to have.
     // removing it will make some apps like Chromium-based browsers (and apps too)

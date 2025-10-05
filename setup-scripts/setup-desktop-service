@@ -1,7 +1,0 @@
-#!/bin/ash
-
-# add required services to autostart
-rc-update add polkit
-rc-update add elogind
-rc-update add udisks2
-rc-update add dbus
