@@ -6,7 +6,10 @@
     "features": {
         "../local-features/openrc": {},
         "../local-features/lxqt-base": {},
-        "../local-features/pipewire": {}
+        "../local-features/pipewire": {},
+        "../local-features/pavucontrol-qt": {},
+        "../local-features/websockify": {},
+        "../local-features/novnc": {}
     },
     "remoteUser": "vscode",
     "containerUser": "vscode"

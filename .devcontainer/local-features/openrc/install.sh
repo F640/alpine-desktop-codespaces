@@ -1,4 +1,4 @@
 #!/bin/ash
 
 apk update
-apk add --no-cache openrc
+apk add --no-cache openrc busybox-openrc
