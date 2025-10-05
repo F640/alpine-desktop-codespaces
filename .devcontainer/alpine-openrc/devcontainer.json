@@ -4,9 +4,9 @@
         "context": "."
     },
     "features": {
-        "./local-features/openrc": {},
-        "./local-features/lxqt-base": {},
-        "./local-features/pipewire": {}
+        "../local-features/openrc": {},
+        "../local-features/lxqt-base": {},
+        "../local-features/pipewire": {}
     },
     "remoteUser": "vscode",
     "containerUser": "vscode"
