@@ -7,4 +7,4 @@ RUN apk update && apk add --no-cache shadow tigervnc doas busybox-suid alpine-co
     # upgrade system to latest \
     apk upgrade
 
-CMD ["/sbin/init"]
+ENTRYPOINT ["/sbin/init"]

@@ -12,5 +12,5 @@
         "../local-features/novnc": {}
     },
     "remoteUser": "vscode",
-    "containerUser": "vscode"
+    "overrideCommand": false
 }
