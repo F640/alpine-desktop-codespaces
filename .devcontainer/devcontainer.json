@@ -7,8 +7,13 @@
         "./local-features/openrc-custom-scripts": {
         },
         "./local-features/lxqt-base": {},
+        "./local-features/lxqt-base/openrc-service": {
+            "installsAfter": [
+                "./local-features/lxqt-base"
+            ]
+        },
         // they aren't really working
-        // "./local-features/lxqt-base/openrc-service": {
+        // "./local-features/lxqt-base/openrc-auth-service": {
         //     "installsAfter": [
         //         "./local-features/lxqt-base"
         //     ]
