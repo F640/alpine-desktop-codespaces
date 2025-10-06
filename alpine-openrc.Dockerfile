@@ -7,6 +7,9 @@ RUN apk update && apk add --no-cache openrc busybox-openrc shadow tigervnc doas 
     # upgrade system to latest \
     apk upgrade
 
+COPY ./autostart/lxqt-powermanagement.desktop  /etc/xdg/autostart/lxqt-powermanagement.desktop
+COPY ./pipewire/dummy-sink.conf /etc/pipewire/pipewire.conf.d/dummy-sink.conf
+
 USER vscode
 
 # terrible, but can handle everchanging uid
@@ -14,7 +17,6 @@ RUN doas mkdir -p /var/run/user/$(id -u) && \
     doas chmod -R 0700 /var/run/user/$(id -u) && \
     doas chown $USER:$USER /var/run/user/$(id -u)
 
-COPY ./pipewire/dummy-sink.conf /home/vscode/pipewire/pipewire.conf.d/dummy-sink.conf
 COPY ./tigervnc/config /home/vscode/.config/tigervnc/config
 
 # breaks elogind

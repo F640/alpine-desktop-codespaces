@@ -7,11 +7,12 @@
         "./local-features/openrc-custom-scripts": {
         },
         "./local-features/lxqt-base": {},
-        "./local-features/lxqt-base/openrc-service": {
-            "installsAfter": [
-                "./local-features/lxqt-base"
-            ]
-        },
+        // they aren't really working
+        // "./local-features/lxqt-base/openrc-service": {
+        //     "installsAfter": [
+        //         "./local-features/lxqt-base"
+        //     ]
+        // },
         "./local-features/lxqt-base/hide-power-opt": {
             "installsAfter": [
                 "./local-features/lxqt-base"
@@ -25,6 +26,14 @@
         },
         "./local-features/websockify": {},
         "./local-features/novnc": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-containers",
+                "ms-vscode-remote.remote-containers"
+            ]
+        }
     },
     "remoteUser": "vscode",
     // might will cause problem with openrc
