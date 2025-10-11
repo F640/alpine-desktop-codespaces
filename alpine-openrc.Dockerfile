@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/base:alpine
 
 # openrc and additional tools
-RUN apk update && apk add --no-cache openrc busybox-openrc shadow tigervnc doas busybox-suid alpine-conf && \
+RUN apk update && apk add --no-cache openrc busybox-openrc shadow tigervnc doas busybox-suid alpine-conf sudo && \
     # add user to wheel group and try fix doas command \
     addgroup vscode wheel && echo "permit nopass :wheel as root" > /etc/doas.d/doas.conf && \
     # upgrade system to latest \
@@ -18,8 +18,5 @@ RUN doas mkdir -p /var/run/user/$(id -u) && \
     doas chown $USER:$USER /var/run/user/$(id -u)
 
 COPY ./tigervnc/config /home/vscode/.config/tigervnc/config
-
-# breaks elogind
-# VOLUME ["/sys/fs/cgroup"]
 
 ENTRYPOINT ["/sbin/init"]
